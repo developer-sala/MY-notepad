@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>감사메모장</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/514fec19c7.js" crossorigin="anonymous"></script>
+  <script src="index.js" defer></script>
+</head>
+
+<body>
+
+  <header>
+    <div class="header-wrap">
+      <div class="head-title">
+        <img class="logo" src="heart.png" alt="손위에하트">
+        <h1>감사 메모장</h1>
+      </div>
+      <div>
+        <p class="saying">"<strong>감사하는 마음</strong>은 최고의 미덕일 뿐만 아니라 모든 미덕의 어버이다." <span class="person"> - 로마철학자</span>
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <main class="memo-main">
+      <i class="fa-solid fa-note-sticky fa-shake fa-lg" style="color: #ffcd4a;"></i>
+      <h2 class="thank">오늘의 감사 메모</h2>
+
+      <form>
+        <label class="a11y-hidden" for="memo-title">메모 제목</label>
+        <input class="input-style" id="memo-title" type="text" placeholder="제목" required maxlength="20">
+        <label class="a11y-hidden" for="memo-content">메모 내용</label>
+        <textarea class="memo-textarea" id="memo-content" placeholder="오늘 감사한 일은 무엇이 있었나요?" required
+          maxlength="350"></textarea>
+        <span id="count">총 0 글자 / 350 글자</span>
+        <button onclick="saveMemo()" class="submit-btn" type="submit">메모 작성완료</button>
+      </form>
+    </main>
+    <section id="add-new">
+      <h2 class="a11y-hidden">추가된 메모장</h2>
+    </section>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,259 @@
+/* 공통 */
+@font-face {
+  font-family: 'omyu_pretty';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2')
+    format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: 'omyu_pretty';
+}
+
+body {
+  margin: 0;
+  background: #fef2f4;
+}
+
+button {
+  border: 0;
+}
+
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+.a11y-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+/* button */
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 0;
+  background: #29363d;
+  color: white;
+  height: 48px;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+/* form */
+.label-style,
+.input-style {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input-style {
+  border: none;
+  box-shadow: 0 1px 0 0 #677880;
+  height: 48px;
+  transition: all 0.2s;
+  border-radius: 4px 4px 0 0;
+  padding: 0 16px;
+  font-size: 16px;
+}
+
+.input-style:hover {
+  box-shadow: 0 2px 0 0 pink;
+}
+
+.input-style:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px pink;
+  border-radius: 4px;
+}
+
+/* layout */
+header {
+  background-color: white;
+}
+
+.header-wrap {
+  width: 1230px;
+  max-width: calc(100% - 60px);
+  height: 120px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.head-title {
+  display: flex;
+  gap: 20px;
+}
+
+.logo {
+  height: 75px;
+  margin: auto;
+  animation: up-down 1.2s infinite ease-in-out alternate;
+}
+
+@keyframes up-down {
+  from {
+    transform: translatey(0px);
+  }
+  to {
+    transform: translatey(-10px);
+  }
+}
+
+.saying strong {
+  box-shadow: inset 0 -0.6em rgba(255, 79, 110, 0.5);
+}
+
+.container {
+  display: flex;
+  width: 1230px;
+  max-width: calc(100% - 60px);
+  margin: auto;
+  gap: 40px;
+}
+
+.container main {
+  flex-basis: 456px;
+  flex-shrink: 0;
+  border-right: 1px solid #ff4f6e;
+  border-right-style: dashed;
+  padding-top: 56px;
+  padding-right: 40px;
+  box-sizing: border-box;
+}
+
+.thank {
+  font-size: 20px;
+  display: inline-block;
+  color: black;
+}
+
+.memo-textarea {
+  display: block;
+  width: 100%;
+  height: 360px;
+  padding: 16px;
+  box-sizing: border-box;
+  font-size: 16px;
+  margin: 16px 0;
+}
+
+/* js에 의해 생성된 부분 */
+p {
+  margin: 0;
+}
+
+.container section {
+  padding-top: 94px;
+  padding-bottom: 210px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: gray;
+  margin-bottom: 10px;
+}
+
+article {
+  background-color: #ffcd4a;
+  border-radius: 0 0 50px 0;
+  margin-bottom: 10px;
+  padding: 15px;
+  width: 300px;
+  min-height: 300px;
+  box-sizing: border-box;
+}
+
+#add-new {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px;
+}
+
+#count {
+  display: inline-block;
+  margin-left: 7px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+article {
+  position: relative;
+}
+
+article button {
+  position: absolute;
+  top: 12px;
+  left: 260px;
+  border-radius: 3px;
+  background-color: black;
+  color: white;
+  padding: 5px;
+}
+
+article button:hover {
+  opacity: 0.5;
+}
+
+.today {
+  font-size: 12px;
+  position: relative;
+  top: 5px;
+}
+
+/* media */
+@media (max-width: 565px) {
+  h1 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 740px) {
+  #add-new {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+  }
+  .header-wrap {
+    display: flex;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    gap: 0;
+  }
+  .container main {
+    border-right: 0;
+    padding-right: 0;
+    min-height: auto;
+  }
+
+  #add-new {
+    margin: auto;
+  }
+  article button {
+    position: absolute;
+    left: 250px;
+  }
+}
+
+@media (min-width: 1800px) {
+  #add-new {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
